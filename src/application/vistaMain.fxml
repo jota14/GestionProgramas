@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="460.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controlador">
+   <children>
+      <JFXButton fx:id="btnBuscar" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="511.0" layoutY="199.0" onAction="#buscarURL" prefHeight="16.0" prefWidth="28.0" ripplerFill="#ffffff00" scaleShape="false" styleClass="btnbuscar" stylesheets="@application.css" text=" ">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXTextField fx:id="txfUrl" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="50.0" layoutY="197.0" prefHeight="25.0" prefWidth="448.0" scaleShape="false" />
+      <Pane layoutY="-1.0" prefHeight="176.0" prefWidth="598.0" style="-fx-background-color: FFBB0D;">
+         <children>
+            <HBox layoutX="535.0" layoutY="2.0" prefHeight="25.0" prefWidth="63.0">
+               <children>
+                  <JFXButton cacheShape="false" centerShape="false" focusTraversable="false" minHeight="0.0" minWidth="0.0" prefHeight="19.0" prefWidth="23.0" ripplerFill="#ffffff00" scaleShape="false" styleClass="btnMin" stylesheets="@application.css" text=" ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+                  <JFXButton cacheShape="false" centerShape="false" focusTraversable="false" ripplerFill="#ffffff00" scaleShape="false" styleClass="btnMax" stylesheets="@application.css" text=" ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+                  <JFXButton cacheShape="false" centerShape="false" focusTraversable="false" minHeight="16.0" minWidth="16.0" onAction="#cerrarVentana" prefHeight="19.0" prefWidth="16.0" ripplerFill="#ffffff00" scaleShape="false" styleClass="btnCerrar" stylesheets="@application.css" text=" ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+               </children>
+            </HBox>
+            <HBox layoutY="88.0" prefHeight="88.0" prefWidth="558.0" spacing="90.0">
+               <padding>
+                  <Insets left="60.0" right="60.0" />
+               </padding>
+               <children>
+                  <JFXButton fx:id="btnExcel" cacheShape="false" centerShape="false" focusTraversable="false" onAction="#abrirExcel" prefHeight="63.0" prefWidth="62.0" scaleShape="false" styleClass="btnExcel" stylesheets="@application.css" text=" ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+                  <JFXButton fx:id="btnWord" cacheShape="false" centerShape="false" focusTraversable="false" onAction="#abrirWord" prefHeight="62.0" prefWidth="63.0" scaleShape="false" styleClass="btnWord" stylesheets="@application.css" text=" ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+                  <JFXButton fx:id="btnPowerP" cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="67.0" prefWidth="63.0" scaleShape="false" styleClass="btnPowerPoint" stylesheets="@application.css" text=" ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <TableView fx:id="tvHistorial" layoutX="50.0" layoutY="249.0" prefHeight="197.0" prefWidth="448.0">
+        <columns>
+          <TableColumn fx:id="columUrl" prefWidth="447.0" text="Historial" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+   </children>
+</AnchorPane>
